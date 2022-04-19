@@ -1,0 +1,570 @@
+body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    background-image: url("../src/village.png");
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    font-family: 'Russo One', sans-serif;
+}
+
+.pokedex {
+    position: relative;
+    top: 100px;
+    width: 70%;
+    height: 790px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.top-side {
+    width: 600px;
+    height: 400px;
+    background: rgb(195,39,15);
+    background: radial-gradient(circle, rgba(195,39,15,1) 0%, rgba(187,53,32,1) 0%, rgba(188,54,32,1) 100%, rgba(255,92,66,1) 100%);
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 3px black;
+    border-radius: 4px 60px 60px 4px;
+    z-index: 0;
+    box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.75);
+}
+
+.speaker {
+    position: relative;
+    top: 50px;
+    width: 118px;
+    height: 220px;
+    background-color: #bb3526;
+    left: -120px;
+    border-style: solid;
+    border-width: 1px 0px 3px 3px;
+    border-color: black; 
+    border-radius: 100px 0px 0px 100px;
+    z-index: 0;
+}
+
+.top-bottom-speaker {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border: 2.5px solid rgb(51, 51, 51);
+    border-radius: 100px;
+    top: 50px;
+    left: 65px;
+    margin-bottom: 10px;
+}
+
+.right-speaker {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2.5px solid rgb(51, 51, 51);
+    background-color: black;
+    border-radius: 100px;
+    top: 55px;
+    left: 103px;
+    margin: 0;
+}
+
+.left-speaker {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border: 2.5px solid rgb(51, 51, 51);
+    border-radius: 103px;
+    top: 30px;
+    left: 26px;
+    margin: 0;
+}
+
+.left-right-speaker :nth-child(1) {
+    display: none;
+}
+
+.camera {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    bottom: 160px;
+    border: solid black 2px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(68, 68, 68);
+}
+
+.cam {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(19, 19, 19);
+    border: 2.5px solid rgb(87, 87, 87);
+    border-radius: 103px;
+    top: 130px;
+    left: 467px;
+    margin: 0;
+}
+
+.screen {
+    display: inherit;
+    position: relative;
+    width: 420px;
+    height: 330px;
+    left: 25px;
+    bottom: 50px;
+    border: solid rgb(187, 187, 187) 5px;
+    background-color: rgb(96, 96, 167);
+    border-radius: 10px;
+}
+
+.deepScreen {
+    display: none;
+    position: relative;
+    width: 420px;
+    height: 330px;
+    left: 25px;
+    bottom: 50px;
+    border: solid rgb(187, 187, 187) 5px;
+    background-color: rgb(96, 96, 167);
+    border-radius: 10px;
+}
+
+.deepScreen > p{
+    position: relative;
+    left: 15px;
+}
+
+.pokemonList{
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 270px; 
+    width: 370px;
+}
+
+.eachOther{
+    position: relative;
+    top: 0px;
+    left: -30px;
+    height: 60px;
+    width: 350px;
+    border-radius: 0px;
+    
+}
+
+.eachOther > img{
+    position: relative;
+    bottom: 85px;
+    left: 260px;
+    width: 100px;
+    height: 100px;
+}
+
+.eachOther > p{
+    position: relative;
+    font-size: 1.3em;
+}
+
+.deletePoke{
+    position: absolute;
+    top: 20px;
+    left: 230px;
+}
+
+.middle-bar {
+    position: relative;
+    bottom: 10px;
+    right: 15px;
+    width: 590px;
+    height: 40px;
+    background-color: #bb3526;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 5px 2px 5px;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+    box-shadow: 10px 0px 20px 2px rgba(0,0,0,0.75);
+
+}
+
+.middle {
+    position: relative;
+    top: 5px;
+    width: 10px;
+    height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: black;
+}
+
+
+/* bottom side*/
+
+.second-screen {
+    position: absolute;
+    background-image: url("../src/pokeball1.png");
+    background-size: 280px;
+    background-position-x: 290px;
+    background-repeat: no-repeat;   
+    width: 70%;
+    height: 280px;
+    margin-left: 80px;
+    bottom: 25px;
+    border: solid rgb(187, 187, 187) 5px;
+    background-color: rgb(48, 42, 73);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.bottom-side {
+    position: relative;
+    bottom: 20px;
+    width: 600px;
+    height: 350px;
+    background-color: #bb3526;
+    margin-right: auto;
+    margin-left: auto;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 3px 1px 3px;
+    border-radius: 4px 60px 60px 4px;
+    box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.75);
+    z-index: 0;
+}
+
+.bottom-pad {
+    position: relative;
+    bottom: 3px;
+    right: 221px;
+    width: 220px;
+    height: 344px;
+    background: rgb(195,39,15);
+    background: linear-gradient(45deg, rgba(195,39,15,1) 0%, rgba(29,8,8,1) 0%, rgba(45,45,45,1) 15%, rgba(68,68,68,1) 100%, rgba(255,92,66,1) 100%);    border-style: solid;
+    border-width: 10px 0px 0px 5px;
+    border-color: black;
+    border-radius: 160px 0px 4px 160px;
+}
+
+.light {
+    position: relative;
+    width: 30px;
+    height: 18px;
+    background: rgb(25, 136, 25);
+    top: 150px;
+    border: 1px solid rgb(3, 83, 3);
+    border-radius: 0px 10px 10px 0px;
+
+
+}
+
+.controls {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background-color: black;
+    z-index: 2;
+}
+
+.enter-button{
+    position: relative;
+    bottom: 290px;
+    width: 200px;
+    height: 220px;
+    background-color: rgb(68, 68, 68);
+    left: 599px;
+    border-style: solid;
+    border-width: 3px 1px 3px 0px;
+    border-color: black; 
+    border-radius: 0px 100px 100px 0px;
+    box-shadow: 10px 10px 15px 5px rgba(0,0,0,0.75);
+}
+
+.enviroment{
+    position: relative;
+    top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: 180px;
+    background-color: rgb(184, 184, 184);
+    border-radius: 100px;
+    border: 1px solid black;
+}
+
+.contour{
+    position: relative;
+    top: 13px;
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 100px;
+}
+
+.btn{
+    position: relative;
+    left: 554px;
+    bottom: 48px;
+    width: 120px;
+    height: 120px;
+    background: rgb(195,39,15);
+    background: linear-gradient(180deg, rgba(195,39,15,1) 0%, rgba(171,178,8,1) 0%, rgba(68,68,68,1) 100%, rgba(255,92,66,1) 100%);    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100px;
+    border: 15px solid black;
+    cursor: pointer;
+
+}
+
+.gamepad{
+    position: absolute;
+    bottom: 60px;
+    width: 200px;
+    height: 220px;
+    background-color: rgb(68, 68, 68);
+    left: -120px;
+    border-style: solid;
+    border-width: 1px 0px 3px 3px;
+    border-color: black; 
+    border-radius: 100px 0px 0px 100px;
+    z-index: 0;
+    box-shadow: inset 32px 26px 31px -37px rgba(0,0,0,0.75);
+}
+
+.top-bottom-btn{
+    position: relative;
+    top: 20px;
+    width: 30px;
+    height: 110px;
+    background: rgb(195,39,15);
+    background: radial-gradient(circle, rgba(195,39,15,1) 0%, rgb(14, 14, 14) 0%, rgba(45,45,45,1) 15%, rgba(157,157,157,1) 100%, rgba(255,92,66,1) 100%);
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0px 1px 0px;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.right-left-btn{
+    position: relative;
+    bottom: 50px;
+    width: 110px;
+    height: 30px;
+    background: rgb(195,39,15);
+    background: radial-gradient(circle, rgba(195,39,15,1) 0%, rgb(14, 14, 14) 0%, rgba(45,45,45,1) 15%, rgba(157,157,157,1) 100%, rgba(255,92,66,1) 100%);
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 1px 0px 1px;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.clickeablePad-Top{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    top: 3px;
+    width: 15px;
+    height: 25px;
+    background-color: rgb(83, 83, 83);
+}
+
+.clickeablePad-bottom{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    top: 57px;
+    width: 15px;
+    height: 25px;
+    background-color: rgb(83, 83, 83);
+}
+
+.clickeablePad-left{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    top: 6px;
+    left: 3px;
+    border: none;
+    width: 25px;
+    height: 15px;
+    background-color: rgb(83, 83, 83);
+    cursor: pointer;
+}
+
+.clickeablePad-right{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    top: 6px;
+    left: 51px;
+    border: none;
+    width: 25px;
+    height: 15px;
+    background-color: rgb(83, 83, 83);
+    cursor: pointer;
+}
+
+
+
+h2{
+    color: rgb(25, 20, 44);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#pokemon{
+    position: relative;
+    top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    width: 80%;
+    height: 50px;
+    left: 42px;
+    border-radius: 20px;
+
+}
+
+/* Stats*/
+
+h3{
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(95, 136, 18);
+}
+
+div.img{
+    position: relative;
+    left: 20px;
+    width: 125px;
+    height: 125px;
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 0px 30px 0px 30px;
+}
+
+img{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    bottom: 10px;
+    right: 10px;
+}
+
+div.abilities{
+    position: relative;
+    bottom: 160px;
+    left: 270px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    width: 147px;
+    height: 40px;
+    background-color: green;
+    position: relative;
+    margin-bottom: 10px;
+    right: 54px;
+    border: 2px solid rgb(13, 99, 13);
+    border-radius: 0px 0px 30px 0px;
+
+}
+
+li>p{
+    position: relative;
+    bottom: 5px;
+    left: 10px;
+}
+
+.type{
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    bottom: 110px;
+    left: 30px;
+}
+
+.exp{
+    position: relative;
+    height: 90px;
+    left: 240px;
+    bottom: 95px;
+    width: 170px;
+}
+
+.stats{
+    position: relative;
+    top: 10px;
+    width: 165px;
+    height: 25px;
+    border: 5px solid black;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.bar{
+    z-index: 1;
+    width: 63%;
+    height: 25px;
+    border-radius: 3px;
+    background: rgb(128,5,5);
+    background: linear-gradient(90deg, rgba(128,5,5,1) 0%, rgba(94,121,9,1) 24%, rgba(7,158,35,1) 45%, rgba(5,255,0,1) 100%);
+}
+
+.error{
+    position: relative;
+    color:black;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    top: 115px;
+    font-size: 1.5em;
+}
+
+.currentLocation{
+    position: relative;
+    bottom: 210px;
+    width: 160px;
+    left: 0px;
+}
+
+.currentLocation > p{
+    width: 87%;
+    height: 30px;
+    margin-bottom: -16px;
+    border-radius: 10px 1px 10px 1px;
+    background: rgb(185, 185, 128);
+}
+
+.currentLocation :nth-last-child(1){
+    background: rgb(0, 255, 136);
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+
+}

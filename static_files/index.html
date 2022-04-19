@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+    <title>Pokedex</title>
+</head>
+<body>
+    <div class="pokedex">
+        <div class="top-side">
+            <div class="speaker">
+                <div class="top-bottom-speaker"></div>
+                <div class="right-speaker"></div>
+                <div class="left-speaker"></div>
+                <div class="top-bottom-speaker"></div>
+            </div>
+            <div class="camera">
+                <div class="cam">
+                </div>
+                <div class="screen">
+                </div>
+                <div class="deepScreen">
+                    <p id="label">No results yet</p>
+                    <ul class="pokemonList">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="middle-bar">
+                <div class="middle">
+                </div>
+        </div>
+        <div class="bottom-side">
+            <div class="second-screen">
+                <h2>
+                    PokeDex
+                </h2>
+                <form id="form">
+                    <input type="text" id="pokemon" placeholder="Insert a pokemon here" required>
+                    <button type="submit" class="btn"></button>
+                </form>
+            </div>
+            <div class="bottom-pad">
+                <div class="controls">
+                </div>
+                <div class="light">
+                </div>
+            </div>
+            <div class="enter-button">
+                <div class="enviroment">
+                    <div class="contour">
+                    </div>
+                </div>
+            </div>
+            <div class="gamepad">
+                <div class="contour" style="top:30px;">
+                    <div class="top-bottom-btn">
+                        <div class="clickeablePad-Top"></div>
+                        <div class="clickeablePad-bottom"></div>
+                    </div>
+                    <div class="right-left-btn">
+                        <button class="clickeablePad-left"></button>
+                        <button class="clickeablePad-right"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const deletePoke = (i) =>{
+            let get = JSON.parse(localStorage.getItem('Pokemon'));
+            get.splice(i, 1);
+            localStorage.setItem('Pokemon', JSON.stringify(get))
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/f6bea7b649.js"></script>
+    <script type="module" src="../app/index.js"></script>
+</body>
+</html>
